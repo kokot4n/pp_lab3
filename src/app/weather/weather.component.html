@@ -1,0 +1,7 @@
+<ngx-datatable [rows]="rows" [columns]="columns"> </ngx-datatable>
+<label for="typeahead-basic">Найти город:</label>
+<ngb-alert *ngIf="alertIsOpen" (closed)="alertIsOpen = false">Введите город корректно и латиницей!</ngb-alert>
+<form (ngSubmit)="send()">
+    <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="city" name="city"/>
+    <button type="submit" class="btn btn-primary">Узнать погоду</button>
+</form>

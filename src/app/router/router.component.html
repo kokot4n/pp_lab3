@@ -1,0 +1,11 @@
+  <ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <a ngbNavLink>Secondary</a>
+      <ng-template ngbNavContent><app-secondary [radioValue]="radioValue" [data]="data"></app-secondary></ng-template>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>Weather</a>
+      <ng-template ngbNavContent><app-weather></app-weather></ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
